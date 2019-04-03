@@ -1,7 +1,12 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>{{title}}</span>
+    <span class="spacer"></span>
+    <app-hero-search></app-hero-search>
+    <mat-icon class="icon" aria-hidden="false" aria-label="Dashboard icon" routerLink="/dashboard">dashboard</mat-icon>
+    <mat-icon class="icon" aria-hidden="false" aria-label="List icon" routerLink="/heroes">list</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+
 <router-outlet></router-outlet>
 <app-messages></app-messages>
